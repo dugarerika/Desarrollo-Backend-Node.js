@@ -33,3 +33,9 @@ promesa.then((valor) => {
 }).catch(err =>{
     console.log('ha habido un error al llamar a sleep', err.message);
 });
+
+// Ejemplo de  promesas en paralelo
+Promise.all([sleep(1000), sleep(2000), sleep(3000)])
+.then(()=> { // Se activa cuando todas las promesas de cumplan
+    console.log('terminaron los 3');
+});
