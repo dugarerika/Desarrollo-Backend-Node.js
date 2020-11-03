@@ -4,9 +4,10 @@
 
 console.log('empiezo')
 
-function escribreTras2Segundos(texto){
+function escribreTras2Segundos(texto, callback){
     setTimeout(() => {
         console.log(texto);
+        callback();
     },2000);
 }
 
