@@ -11,6 +11,7 @@ function escribreTras2Segundos(texto){
     },2000);
 }
 
-escribreTras2Segundos('texto');
+escribreTras2Segundos('texto1');
+escribreTras2Segundos('texto2');
 console.log('termino');
 
