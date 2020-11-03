@@ -10,6 +10,10 @@ function escribreTras2Segundos(texto){
     },2000);
 }
 
-escribreTras2Segundos('texto');
-console.log('termino');
+for(let i=0; i<5; i++){
+    escribreTras2Segundos('texto' + i, () => {});
+}
+
+// escribreTras2Segundos('texto');
+// console.log('termino');
 
