@@ -18,16 +18,23 @@ conexion.connect(err =>{
         console.log('error al conectar', err);   
         return; 
     }
-console.log('Conectado a Mysql');
+    console.log('Conectado a Mysql');
 
 // Lanzar una consulta
 
-conexion.query('SELECT * FROM agentes', (err, rows, fields) => {
-    if (err){
-        console.log('error en la consulta');
-        return;
-    }
-})
+    conexion.query('SELECT * FROM agentes', (err, rows, fields) => {
+        if (err){
+            console.log('error en la consulta');
+            return;
+        }
+
+        console.log(rows);
+
+        // Cerrar la conexion
+        conexion.end();
+
+    });
 
 });
 
+// con un ORM : Agente.find({age:30}); // select * from agentes where age = 30;

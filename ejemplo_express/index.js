@@ -13,6 +13,11 @@ app.get('/', (request, response, next) => {
     response.send('hola');
 });
 
+app.get('/admin', (request, response, next) => {
+    response.send('zona de administracion');
+});
+
+
 // arrancar el servidor
 
 const server = http.Server(app);
