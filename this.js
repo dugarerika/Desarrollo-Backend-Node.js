@@ -22,3 +22,4 @@ const pepe = {
 };
 
 limon.saluda.call(pepe);
+limon.saluda.apply(pepe);

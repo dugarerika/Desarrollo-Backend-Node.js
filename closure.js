@@ -1,6 +1,8 @@
 'use strict';
 
 function creaSumador(a){
+    // Aqui tenemos el argumetno a con un 5
+    // y este contecto es capturado por la funcion que creamos y retornamos
     return function(b) {
         return b + a;
     }
@@ -8,6 +10,8 @@ function creaSumador(a){
 
 const suma5 = creaSumador(5);
 console.log(suma5(3),suma5(7));
+
+// ------------------------
 
 // Crear un factory de objetos
 
