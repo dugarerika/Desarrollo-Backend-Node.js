@@ -23,11 +23,15 @@ const promesa = sleep(3000);
 console.log(promesa);
 
 // Cuando se resuelva la promersa hacemos otras cosas
-promesa.then((valor) => {
+promesa.catch(err => {
+    console.log('fallo la primera invocacion');
+    return 'chungo'
+}).then((valor) => {
     console.log('resuelta con', valor);
     return sleep(3000);
 }).then(()=>{
     console.log('resulta la segunda');
+    return sleep(3000);
 }).then(()=>{
     console.log('resulta la tercera');
 }).catch(err =>{
@@ -39,3 +43,6 @@ Promise.all([sleep(1000), sleep(2000), sleep(3000)])
 .then(()=> { // Se activa cuando todas las promesas de cumplan
     console.log('terminaron los 3');
 });
+
+
+
