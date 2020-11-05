@@ -11,7 +11,20 @@ const {query, validationResult} = require('express-validator');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  // res.locals.title = 'Express';
+
+  const segundo = (new Date()).getSeconds(); // Segundo actual
+
+  res.locals.valor = '<script>alert("inyeccion de codigo");</script>'
+
+  res.locals.condicion = {
+    segundo: segundo,
+    // segundo // se podria escribir de esta forma porque los dos son iguales
+    estado: segundo % 2 === 0
+    
+  }
+
+  res.render('index'); // , { title: 'Express' });
 });
 
 router.get('/paramenruta/:etiqueta', (req, res, next) => { 

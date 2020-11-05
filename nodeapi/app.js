@@ -10,6 +10,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Establecemos la variable title para todas las vistas
+app.locals,title = 'Express';
+
 // Ante cada peticion se ejecutan los siguiente middlewares
 app.use(function(req, res, next){
   console.log('Soy un middleware');
