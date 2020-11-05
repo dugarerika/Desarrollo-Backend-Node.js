@@ -18,6 +18,11 @@
     <% } else { %>
       <p><%= condicion.segundo %> es impar </p>
       <% } %>
+
+    <h2>Bucles</h2>
+    <% users.forEach(user => { %>
+      <p> <%= user.name + '' + user.age %> </p>
+      <% }) %>
     
     
 

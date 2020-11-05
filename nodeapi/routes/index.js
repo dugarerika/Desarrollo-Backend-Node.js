@@ -21,8 +21,14 @@ router.get('/', function(req, res, next) {
     segundo: segundo,
     // segundo // se podria escribir de esta forma porque los dos son iguales
     estado: segundo % 2 === 0
-    
+
   }
+
+  res.locals.users = [
+    { name: 'Smith', age: 39},
+    { name: 'Jones', age: 22},
+    { name: 'Brown', age: 42}
+  ]
 
   res.render('index'); // , { title: 'Express' });
 });
