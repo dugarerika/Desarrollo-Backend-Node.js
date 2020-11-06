@@ -21,6 +21,19 @@ npm run start
 ```sh
 npm run dev
 ```
+
+## API Methods
+
+GET/api/agentes
+
+[
+  {
+    "_id": "5fa58e56fb049a189288b37d",
+    "name": "Smith",
+    "age": 48
+  }
+]
+
 ## How to start a local mongodb instance for development
 
 ```sh
