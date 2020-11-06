@@ -21,6 +21,12 @@ npm run start
 ```sh
 npm run dev
 ```
+## How to start a local mongodb instance for development
+
+```sh
+// ./bin/mongod --dbpath ./data/db --directoryperdb
+// ./bin/mongo
+```
 
 ## Author
 
