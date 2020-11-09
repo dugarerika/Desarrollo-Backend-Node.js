@@ -46,6 +46,53 @@ GET /api/agentes
   }
 ]
 
+## retrieves one agent
+
+/* GET /api/agentes/_id */
+
+{
+"result": {
+"_id": "5fa957aa5567db11b483ca97",
+"name": "Smith",
+"age": 36,
+"__v": 0
+}
+}
+
+### Create agent
+
+POST /api/agentes { name:'name', age: 00}
+
+{
+    "result": {
+        "_id": "5fa967c40b35bb19e7995fa5",
+        "name": "Erika",
+        "age": 35,
+        "__v": 0
+    }
+}
+
+### Update agent
+
+POST /api/agentes/<_id> body: { name:'name', age: 00}
+
+
+{
+    "result": {
+        "_id": "5fa957aa5567db11b483ca97",
+        "name": "Smith",
+        "age": 2,
+        "__v": 0
+    }
+}
+
+### Delete agent
+
+DELETE /api/agentes/<_id> 
+
+Return: HTTPCode 200
+
+
 ## How to start a local mongodb instance for development
 
 ```sh
