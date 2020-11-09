@@ -11,6 +11,18 @@
 npm install
 ```
 
+## Load initial data
+
+ you can load the database initial data using this:
+
+```sh
+npm run init-db
+```
+
+**Warning! this script deletes the database data before starts the load.**
+
+Use in production onliy in first deployment.
+
 ## Usage
 
 ```sh
@@ -24,7 +36,7 @@ npm run dev
 
 ## API Methods
 
-GET/api/agentes
+GET /api/agentes
 
 [
   {
